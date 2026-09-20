@@ -41,8 +41,8 @@ description: 维护飞书产品知识库（Karpathy 风格）。检测新增原�
 
 生成后，在人物摘要节点下创建新的 wiki 节点并写入内容：
 ```bash
-lark-cli wiki nodes create --params '{"space_id":"7403634338186952732"}' \
-  --data '{"node_type":"origin","obj_type":"docx","parent_node_token":"KLFQwIYs8i7E4Lk0JqNclj4an8b","title":"<人物名>"}'
+lark-cli wiki nodes create --params '{"space_id":"{{FEISHU_SPACE_ID}}"}' \
+  --data '{"node_type":"origin","obj_type":"docx","parent_node_token":"{{KB_PERSON_NODE_TOKEN}}","title":"<人物名>"}'
 lark-cli docs +update --doc <obj_token> --mode overwrite --markdown @<file>
 ```
 
